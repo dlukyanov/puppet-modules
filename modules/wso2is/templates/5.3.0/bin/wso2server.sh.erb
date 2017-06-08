@@ -1,6 +1,6 @@
 #!/bin/sh
 # ----------------------------------------------------------------------------
-#  Copyright (c) 2015 WSO2, Inc. http://www.wso2.org
+#  Copyright 2005-2012 WSO2, Inc. http://www.wso2.org
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -263,7 +263,7 @@ cd "$CARBON_HOME"
 
 TMP_DIR="$CARBON_HOME"/tmp
 if [ -d "$TMP_DIR" ]; then
-rm -rf "$TMP_DIR"
+rm -rf "$TMP_DIR"/*
 fi
 
 START_EXIT_STATUS=121
@@ -316,6 +316,7 @@ do
     -Dcom.ibm.cacheLocalHost=true \
     -DworkerNode=false \
     -Dsetup \
+    -Dorg.wso2.ignoreHostnameVerification=true \
     org.wso2.carbon.bootstrap.Bootstrap $*
     status=$?
 done

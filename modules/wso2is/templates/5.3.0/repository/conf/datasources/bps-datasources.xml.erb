@@ -42,6 +42,10 @@
                     <testOnBorrow><%= datasource['test_on_borrow'] %></testOnBorrow>
                     <validationQuery><%= datasource['validation_query'] %></validationQuery>
                     <validationInterval><%= datasource['validation_interval'] %></validationInterval>
+                    <!--TODO: not parametrized-->
+                    <useDataSourceFactory>false</useDataSourceFactory>
+                    <defaultAutoCommit>true</defaultAutoCommit>
+                    <maxIdle>20</maxIdle>
                 </configuration>
             </definition>
         </datasource>

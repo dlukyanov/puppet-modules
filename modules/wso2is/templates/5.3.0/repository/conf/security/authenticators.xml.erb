@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <!--
-  ~  Copyright (c) 2016, WSO2 Inc. (http://wso2.com) All Rights Reserved.
+  ~ Copyright 2005-2011 WSO2, Inc. (http://wso2.com)
   ~
   ~  WSO2 Inc. licenses this file to you under the Apache License,
   ~  Version 2.0 (the "License"); you may not use this file except
   ~  in compliance with the License.
-  ~  You may obtain a copy of the License at
+  ~ You may obtain a copy of the License at
   ~
-  ~    http://www.apache.org/licenses/LICENSE-2.0
+  ~ http://www.apache.org/licenses/LICENSE-2.0
   ~
   ~  Unless required by applicable law or agreed to in writing,
   ~  software distributed under the License is distributed on an
@@ -41,6 +41,7 @@
 
             <!-- <Parameter name="IdPCertAlias">wso2carbon</Parameter> -->
             <!-- <Parameter name="ResponseSignatureValidationEnabled">false</Parameter> -->
+            <!-- <Parameter name="AssertionSignatureValidationEnabled">false</Parameter> -->
             <!-- <Parameter name="LoginAttributeName"></Parameter> -->
             <!-- <Parameter name="RoleClaimAttribute"></Parameter> -->
             <!-- <Parameter name="AttributeValueSeparator">,</Parameter> -->
@@ -50,12 +51,12 @@
             <!-- <Parameter name="ProvisioningDefaultRole">admin</Parameter> -->
             <!-- <Parameter name="IsSuperAdminRoleRequired">true</Parameter> -->
 	</Config>
-
+	
 	<!-- If this authenticator should skip any URI from authentication, specify it under "SkipAuthentication"
 	<SkipAuthentication>
             <UrlContains></UrlContains>
         </SkipAuthentication> -->
-
+	
 	<!-- If this authenticator should skip any URI from session validation, specify it under "SkipAuthentication
         <SkipSessionValidation>
             <UrlContains></UrlContains>
@@ -71,5 +72,5 @@
 	      <Parameter name="WhiteList"/>
 	  </Config>
     </Authenticator-->
-
+    
 </Authenticators>

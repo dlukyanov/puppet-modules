@@ -1,5 +1,5 @@
 <!--
-~ Copyright (c) 2015, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+~ Copyright (c) 2010, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
 ~
 ~ Licensed under the Apache License, Version 2.0 (the "License");
 ~ you may not use this file except in compliance with the License.
@@ -52,18 +52,19 @@
 <SSOIdentityProviderConfig>
   <ServiceProviders>
     <ServiceProvider>
-      <Issuer>wso2.my.dashboard</Issuer>
-      <AssertionConsumerServiceURLs>
-        <AssertionConsumerServiceURL>${carbon.protocol}://${carbon.host}:${carbon.management.port}/dashboard/acs</AssertionConsumerServiceURL>
-      </AssertionConsumerServiceURLs>
-      <DefaultAssertionConsumerServiceURL>${carbon.protocol}://${carbon.host}:${carbon.management.port}/dashboard/acs</DefaultAssertionConsumerServiceURL>
-      <SignResponse>true</SignResponse>
+ <Issuer>wso2.my.dashboard</Issuer>
+ <AssertionConsumerServiceURLs>
+ <AssertionConsumerServiceURL>${carbon.protocol}://${carbon.host}:${carbon.management.port}/dashboard/acs</AssertionConsumerServiceURL>
+ </AssertionConsumerServiceURLs>
+ <DefaultAssertionConsumerServiceURL>${carbon.protocol}://${carbon.host}:${carbon.management.port}/dashboard/acs</DefaultAssertionConsumerServiceURL>
+ <SignResponse>true</SignResponse>
       <EnableAudienceRestriction>true</EnableAudienceRestriction>
       <AudiencesList>
         <Audience>carbonServer</Audience>
       </AudiencesList>
     </ServiceProvider>
 
+    <!--TODO: added as is from 5.1.0-->
     <%- @sso_service_providers.each do |server_name, server| -%>
     <ServiceProvider>
           <Issuer><%= server_name %></Issuer>
